@@ -1,0 +1,33 @@
+Private Sub CommandButton1_Click()
+
+    Dim Hoja1 As Worksheet
+    Dim Hoja2 As Worksheet
+    Dim ultimaFila As Long
+    
+    ' Definir las hojas de trabajo
+    Set Hoja1 = ThisWorkbook.Sheets("CONTROL ENTRADA SALIDA")
+    Set Hoja2 = ThisWorkbook.Sheets("REGISTRO ENTRADA_SALIDA")
+    
+    ' Encontrar la última fila en las columnas B a K de Hoja2
+    ultimaFila = Hoja2.Cells(Hoja2.Rows.Count, "K").End(xlUp).Row
+    
+    ' Copiar los valores de B9 a F17 de Hoja1 a la siguiente fila en B a K de Hoja2
+    Hoja2.Cells(ultimaFila + 1, "B").Value = Hoja1.Range("B9").Value
+    Hoja2.Cells(ultimaFila + 1, "C").Value = Hoja1.Range("C10").Value
+    Hoja2.Cells(ultimaFila + 1, "D").Value = Hoja1.Range("F10").Value
+    Hoja2.Cells(ultimaFila + 1, "E").Value = Hoja1.Range("D12").Value
+    Hoja2.Cells(ultimaFila + 1, "F").Value = Hoja1.Range("F12").Value
+    Hoja2.Cells(ultimaFila + 1, "G").Value = Hoja1.Range("B17").Value
+    Hoja2.Cells(ultimaFila + 1, "H").Value = Hoja1.Range("C17").Value
+    Hoja2.Cells(ultimaFila + 1, "I").Value = Hoja1.Range("D17").Value
+    Hoja2.Cells(ultimaFila + 1, "J").Value = Hoja1.Range("E17").Value
+    Hoja2.Cells(ultimaFila + 1, "K").Value = Hoja1.Range("F17").Value
+    
+    ' Incrementar el valor de la celda F24 en Hoja1
+    Hoja1.Range("F24").Value = Hoja1.Range("F24").Value + 1
+    
+    ' Limpiar las celdas del formulario en Hoja1
+    Hoja1.Range("D12").ClearContents
+    Hoja1.Range("B17:F23").ClearContents
+    
+End Sub

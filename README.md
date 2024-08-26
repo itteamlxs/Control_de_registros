@@ -124,5 +124,3 @@ End Sub
 - **Resultados de status**: Muestran el total de status de cada proceso, categorizados por `Resuelto`, `En Proceso`, `Cancelado`.
 - **Gráficos**: Se generan partiendo de las tablas de los conteos por proceso y conteo de soporte por filial.
 ```
-
-Este archivo README.md está listo para ser utilizado en la documentación de tus macros y funcionalidades en Excel. ¿Hay algo más que te gustaría ajustar o añadir?
